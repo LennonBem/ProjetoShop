@@ -7,26 +7,26 @@ import 'package:shop/data/store.dart';
 import 'package:shop/exceptions/auth_exception.dart';
 
 class Auth with ChangeNotifier {
-  String? _token;
-  String? _email;
-  String? _userId;
-  DateTime? _expiryDate;
-  Timer? _logoutTimer;
+  String _token;
+  String _email;
+  String _userId;
+  DateTime _expiryDate;
+  Timer _logoutTimer;
 
   bool get isAuth {
     final isValid = _expiryDate?.isAfter(DateTime.now()) ?? false;
     return _token != null && isValid;
   }
 
-  String? get token {
+  String get token {
     return isAuth ? _token : null;
   }
 
-  String? get email {
+  String get email {
     return isAuth ? _email : null;
   }
 
-  String? get userId {
+  String get userId {
     return isAuth ? _userId : null;
   }
 
@@ -62,7 +62,7 @@ class Auth with ChangeNotifier {
         'token': _token,
         'email': _email,
         'userId': _userId,
-        'expiryDate': _expiryDate!.toIso8601String(),
+        'expiryDate': _expiryDate.toIso8601String(),
       });
 
       _autoLogout();

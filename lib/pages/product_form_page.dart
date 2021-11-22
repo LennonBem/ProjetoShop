@@ -4,7 +4,7 @@ import 'package:shop/models/product.dart';
 import 'package:shop/models/product_list.dart';
 
 class ProductFormPage extends StatefulWidget {
-  const ProductFormPage({Key? key}) : super(key: key);
+ 
 
   @override
   _ProductFormPageState createState() => _ProductFormPageState();

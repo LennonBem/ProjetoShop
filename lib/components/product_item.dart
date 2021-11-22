@@ -8,13 +8,12 @@ import 'package:shop/utils/app_routes.dart';
 class ProductItem extends StatelessWidget {
   final Product product;
   const ProductItem(
-    this.product, {
-    Key? key,
-  }) : super(key: key);
+    this.product,   
+);
 
   @override
   Widget build(BuildContext context) {
-    final msg = ScaffoldMessenger.of(context);
+    final msg = Scaffold.of(context);
     return ListTile(
       leading: CircleAvatar(
         backgroundImage: NetworkImage(product.imageUrl),

@@ -3,8 +3,8 @@ class HttpException implements Exception {
   final int statusCode;
 
   HttpException({
-    required this.msg,
-    required this.statusCode,
+    this.msg,
+    this.statusCode,
   });
 
   @override

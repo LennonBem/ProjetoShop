@@ -7,9 +7,9 @@ class Order {
   final DateTime date;
 
   Order({
-    required this.id,
-    required this.total,
-    required this.products,
-    required this.date,
+     this.id,
+     this.total,
+     this.products,
+     this.date,
   });
 }

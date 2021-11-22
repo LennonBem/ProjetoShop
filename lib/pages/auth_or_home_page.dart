@@ -5,7 +5,6 @@ import 'package:shop/pages/auth_page.dart';
 import 'package:shop/pages/products_overview_page.dart';
 
 class AuthOrHomePage extends StatelessWidget {
-  const AuthOrHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

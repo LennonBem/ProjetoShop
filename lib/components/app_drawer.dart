@@ -4,7 +4,7 @@ import 'package:shop/models/auth.dart';
 import 'package:shop/utils/app_routes.dart';
 
 class AppDrawer extends StatelessWidget {
-  const AppDrawer({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {

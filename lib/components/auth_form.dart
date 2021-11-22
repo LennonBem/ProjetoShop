@@ -6,7 +6,7 @@ import 'package:shop/models/auth.dart';
 enum AuthMode { Signup, Login }
 
 class AuthForm extends StatefulWidget {
-  const AuthForm({Key? key}) : super(key: key);
+
 
   @override
   _AuthFormState createState() => _AuthFormState();
@@ -67,14 +67,14 @@ class _AuthFormState extends State<AuthForm> {
       if (_isLogin()) {
         // Login
         await auth.login(
-          _authData['email']!,
-          _authData['password']!,
+          _authData['email'],
+          _authData['password'],
         );
       } else {
         // Registrar
         await auth.signup(
-          _authData['email']!,
-          _authData['password']!,
+          _authData['email'],
+          _authData['password'],
         );
       }
     } on AuthException catch (error) {

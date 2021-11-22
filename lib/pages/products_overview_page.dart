@@ -13,7 +13,7 @@ enum FilterOptions {
 }
 
 class ProductsOverviewPage extends StatefulWidget {
-  ProductsOverviewPage({Key? key}) : super(key: key);
+ 
 
   @override
   _ProductsOverviewPageState createState() => _ProductsOverviewPageState();
@@ -73,7 +73,7 @@ class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
             ),
             builder: (ctx, cart, child) => Badge(
               value: cart.itemsCount.toString(),
-              child: child!,
+              child: child,
             ),
           ),
         ],
